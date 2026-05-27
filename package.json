@@ -12,12 +12,13 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
-    "typescript": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "typescript": "latest",
+    "vite": "latest"
   },
   "devDependencies": {
+    "@circleci/jest-circleci-coverage": "npm:@jsr/circleci__jest-circleci-coverage@^0.2.0",
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
     "@testing-library/user-event": "latest",
@@ -27,6 +28,13 @@
     "@types/react-dom": "latest",
     "jest": "latest",
     "jest-environment-jsdom": "latest",
+    "jest-junit": "^17.0.0",
     "ts-jest": "latest"
+  },
+  "jest-junit": {
+    "suiteNameTemplate": "{filepath}",
+    "classNameTemplate": "{filepath}",
+    "titleTemplate": "{title}",
+    "addFileAttribute": "true"
   }
 }

@@ -1,0 +1,10 @@
+---
+name: ci tests
+discover: npx jest --listTests
+run: JEST_JUNIT_OUTPUT_FILE="<< outputs.junit >>" npx jest --ci --reporters=default --reporters=jest-junit --runTestsByPath -- << test.atoms >>
+analysis: CIRCLECI_COVERAGE="<< outputs.circleci-coverage >>" npx jest --ci --reporters=default --reporters=@circleci/jest-circleci-coverage/reporter --silent --runTestsByPath -- << test.atoms >>
+outputs:
+  junit: test-reports/tests.xml
+  circleci-coverage: .tia-coverage/circleci-coverage.json
+options:
+  test-impact-analysis: true
