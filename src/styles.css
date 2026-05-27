@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #f6f8fb;
+  color: #1c2430;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0;
+}
+
+.page-nav button {
+  border: 1px solid #a8b3c4;
+  border-radius: 999px;
+  background: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.page-nav button[aria-current="page"] {
+  border-color: #2d6cdf;
+  background: #2d6cdf;
+  color: #fff;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.input-card {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #d7dde8;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.generated-button {
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: #fff;
+  cursor: pointer;
+}

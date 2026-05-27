@@ -1,0 +1,22 @@
+import { render, screen } from '@testing-library/react';
+    import userEvent from '@testing-library/user-event';
+    import { Component0259 } from './Component0259';
+    import { helper025 } from '../../helpers/helper025';
+
+    describe('Component0259', () => {
+      it('applies helper025 to valid input', async () => {
+        const user = userEvent.setup();
+        const onApply = jest.fn();
+
+        render(<Component0259 label="Generated 0259" value="hello world" onApply={onApply} />);
+        await user.click(screen.getByRole('button', { name: 'Run Generated 0259' }));
+
+        expect(onApply).toHaveBeenCalledWith(helper025('hello world'));
+      });
+
+      it('disables itself for blank input', () => {
+        render(<Component0259 label="Generated 0259" value="   " onApply={jest.fn()} />);
+
+        expect(screen.getByRole('button', { name: 'Run Generated 0259' })).toBeDisabled();
+      });
+    });

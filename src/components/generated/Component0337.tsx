@@ -1,0 +1,24 @@
+import type { GeneratedButtonProps } from '../GeneratedButtonProps';
+    import { helper071 } from '../../helpers/helper071';
+
+    export function Component0337({
+      label = 'Button 0337',
+      value,
+      onApply,
+    }: GeneratedButtonProps) {
+      const isDisabled = value.trim().length === 0;
+
+      return (
+        <button
+          type="button"
+          className="generated-button"
+          style={{ backgroundColor: 'hsl(192, 68%, 42%)', borderRadius: 6 }}
+          disabled={isDisabled}
+          aria-label={`Run ${label}`}
+          data-helper-id="helper071"
+          onClick={() => onApply(helper071(value))}
+        >
+          {label}
+        </button>
+      );
+    }
