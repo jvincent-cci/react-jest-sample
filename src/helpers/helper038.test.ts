@@ -1,11 +1,13 @@
-import { helper038 } from './helper038';
+import { helper038 } from "./helper038";
 
-    describe('helper038', () => {
-      it('transforms valid input', () => {
-        expect(helper038(' Sample Input ')).toContain('h038');
-      });
+describe("helper038", () => {
+  it("transforms valid input", () => {
+    expect(helper038(" Sample Input ")).toContain("h038");
+  });
 
-      it('rejects blank input', () => {
-        expect(() => helper038('   ')).toThrow('helper038 requires a non-empty input');
-      });
-    });
+  it("rejects blank input", () => {
+    expect(() => helper038("   ")).toThrow(
+      "helper038 requires a non-empty input",
+    );
+  });
+});
