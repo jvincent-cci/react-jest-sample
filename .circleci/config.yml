@@ -20,7 +20,7 @@ jobs:
       - run: mkdir -p test-reports
       - run:
           name: Run testsuite
-          command: circleci run testsuite "ci tests"
+          command: circleci run testsuite "ci tests" --select-tests=impacted
       - store_test_results:
           path: test-reports
       - run:
