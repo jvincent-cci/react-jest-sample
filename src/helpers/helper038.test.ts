@@ -2,7 +2,7 @@ import { helper038 } from './helper038';
 
     describe('helper038', () => {
       it('transforms valid input', () => {
-        expect(helper038(' Sample Input ')).toContain('h037');
+        expect(helper038(' Sample Input ')).toContain('h038');
       });
 
       it('rejects blank input', () => {
